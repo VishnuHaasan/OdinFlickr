@@ -1,0 +1,6 @@
+<%= form_with url: "/photos", method: :get do |f| %>
+  <%= f.label :user_id %>
+  <%= f.text_field :user_id %><br>
+  <%= f.submit "Search" %>
+<% end %>
+

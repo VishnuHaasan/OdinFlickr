@@ -1,0 +1,12 @@
+<% flash.each do |t,m| %>
+  <%= m %><br>
+<% end %>
+<%= render "search" %>
+<% unless @notice.nil? %>
+  <%= @notice %><br>
+<% end %>
+<% unless @photos.nil? %>
+  <% @photos.each do |p| %>
+    <%= image_tag Flickr.url(p) %>
+  <% end %>
+<% end %>
